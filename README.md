@@ -33,12 +33,12 @@ waf判断|返回包中存在："This site is protected by CrawlProtect"|任意�
 waf判断|re.search(r"\A(OK\|FAIL)", headers.get("X-Backside-Transport", ""), re.I)|任意扫描方式|IBM WebSphere DataPower (IBM)
 waf判断|re.search(r"\Asessioncookie=", headers.get(HTTP_HEADER.SET_COOKIE, ""), re.I)或者code == 200 and re.search(r"\ACondition Intercepted", page or "", re.I)|任意扫描方式|Deny All Web Application Firewall (DenyAll)
 waf判断|headers.get("x-distil-cs") |任意扫描方式|Distil Web Application Firewall Security (Distil Networks)
-系统服务|内容|内容|xxxx
-系统服务|内容|内容|xxxx
-系统服务|内容|内容|xxxx
-系统服务|内容|内容|xxxx
-系统服务|内容|内容|xxxx
-系统服务|内容|内容|xxxx
+waf判断|re.search(r"DOSarrest", headers.get(HTTP_HEADER.SERVER, ""), re.I)或者headers.get("X-DIS-Request-ID")|任意扫描方式|DOSarrest (DOSarrest Internet Security)
+waf判断|headers.get("X-dotDefender-denied", "")或者返回包中存在"dotDefender Blocked Your Request", '<meta name="description" content="Applicure is the leading provider of web application security', "Please contact the site administrator, and provide the following Reference ID:"|任意扫描方式|dotDefender (Applicure Technologies)
+waf判断|re.search(r"\AECDF", headers.get(HTTP_HEADER.SERVER, ""), re.I)|任意扫描方式|EdgeCast Web Application Firewall (Verizon)
+waf判断|返回包中存在"Invalid GET Data"|任意扫描方式|ExpressionEngine (EllisLab)
+waf判断|re.search(r"\AFORTIWAFSID=", headers.get(HTTP_HEADER.SET_COOKIE, ""), re.I)或者是返回包中存在(".fgd_icon", ".blocked", ".authenticate")|任意扫描方式|FortiWeb Web Application Firewall (Fortinet)
+waf判断|re.search(r"\AODSESSION=", headers.get(HTTP_HEADER.SET_COOKIE, ""), re.I)|任意扫描方式|Hyperguard Web Application Firewall (art of defence)
 系统服务|内容|内容|xxxx
 系统服务|内容|内容|xxxx
 系统服务|内容|内容|xxxx
