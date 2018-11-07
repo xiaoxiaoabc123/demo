@@ -92,9 +92,9 @@ Ingres注入|<error regexp="Warning.*?ingres_"/>        <error regexp="Ingres SQ
 Frontbase注入|<error regexp="Exception (condition )?\d+\. Transaction rollback"/>        <error regexp="com\.frontbase\.jdbc"/>|awvs|存在Frontbase注入
 HSQLDB注入|<error regexp="org\.hsqldb\.jdbc"/><error regexp="Unexpected end of command in statement \["/> <error regexp="Unexpected token.*?in statement \["/>|awvs|存在HSQLDB注入
 H2注入|<error regexp="org\.h2\.jdbc"/>|awvs|存在H2注入
-系统服务|内容|内容|xxxx
-系统服务|内容|内容|xxxx
-系统服务|内容|内容|xxxx
+flash类型|存在文件如下ZeroClipboard.swf、/zeroclipboard.swf、/swfupload.swf、/swfupload/swfupload.swf、/open-flash-chart.swf、/uploadify.swf、/flowplayer.swf、/Jplayer.swf、/extjs/resources/charts.swf|任意扫描|可能存在flash跨站漏洞
+web 编辑器|存在目录 /fckeditor/_samples/default.html 、/ckeditor/samples/ 、/editor/ckeditor/samples/、/ckeditor/samples/sample_posteddata.php、editor/ckeditor/samples/sample_posteddata.php 、fck/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.php 、/fckeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellcheckder.php|任意扫描方式|存在web 编辑器
+ueditor SSRF|存在目录文件 /ueditor/ueditor.config.js、/ueditor/php/getRemoteImage.php|任意扫描方式|存在ueditor ssrf
 系统服务|内容|内容|xxxx
 系统服务|内容|内容|xxxx
 系统服务|内容|内容|xxxx
