@@ -95,18 +95,18 @@ H2注入|<error regexp="org\.h2\.jdbc"/>|awvs|存在H2注入
 flash类型|存在文件如下ZeroClipboard.swf、/zeroclipboard.swf、/swfupload.swf、/swfupload/swfupload.swf、/open-flash-chart.swf、/uploadify.swf、/flowplayer.swf、/Jplayer.swf、/extjs/resources/charts.swf|任意扫描|可能存在flash跨站漏洞
 web 编辑器|存在目录 /fckeditor/_samples/default.html 、/ckeditor/samples/ 、/editor/ckeditor/samples/、/ckeditor/samples/sample_posteddata.php、editor/ckeditor/samples/sample_posteddata.php 、fck/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.php 、/fckeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellcheckder.php|任意扫描方式|存在web 编辑器
 ueditor SSRF|存在目录文件 /ueditor/ueditor.config.js、/ueditor/php/getRemoteImage.php|任意扫描方式|存在ueditor ssrf
-敏感文件泄漏|/etc/passwd {tag="root:x:"} |任意扫描方式|存在漏洞
-敏感文件泄漏|/proc/meminfo {tag="MemTotal"}  {status=200}|任意扫描方式|存在漏洞
-敏感文件泄漏|/etc/profile         {tag="/etc/profile.d/*.sh"}  {status=200}  |任意扫描方式|存在漏洞
-敏感文件泄漏|/../../../../../../../../../../../../../etc/passwd    {tag="root:x:"} |任意扫描方式|存在漏洞
-敏感文件泄漏|/../../../../../../../../../../../../../etc/profile   {tag="/etc/profile.d/*.sh"}|任意扫描方式|存在漏洞
-敏感文件泄漏|//././././././././././././././././././././././././../../../../../../../../etc/profile  {tag="/etc/profile.d/*.sh"} |任意扫描方式|存在漏洞
-敏感文件泄漏|/aa/../../cc/../../bb/../../dd/../../aa/../../cc/../../bb/../../dd/../../bb/../../dd/../../bb/../../dd/../../bb/../../dd/../../ee/../../etc/profile {status=200}  {tag="/etc/profile.d/*.sh"}|任意扫描方式|存在漏洞
-敏感文件泄漏|/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/profile {tag="/etc/profile.d/*.sh"} |任意扫描方式|存在漏洞
-敏感文件泄漏|/..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd  {tag="root:x:"}  |任意扫描方式|存在漏洞
-敏感文件泄漏|/..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd   {tag="root:x:"} |任意扫描方式|存在漏洞
-敏感文件泄漏|/%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd {tag="root:x:"} |任意扫描方式|存在漏洞
-敏感文件泄漏|/resource/tutorial/jndi-appconfig/test?inputFile=/etc/passwd    {tag="root:x:"} |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/etc/passwd {tag="root:x:"} |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/proc/meminfo {tag="MemTotal"}  {status=200}|任意扫描方式|存在漏洞
+目录文件遍历泄漏|/etc/profile         {tag="/etc/profile.d/*.sh"}  {status=200}  |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/../../../../../../../../../../../../../etc/passwd    {tag="root:x:"} |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/../../../../../../../../../../../../../etc/profile   {tag="/etc/profile.d/*.sh"}|任意扫描方式|存在漏洞
+目录文件遍历泄漏|//././././././././././././././././././././././././../../../../../../../../etc/profile  {tag="/etc/profile.d/*.sh"} |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/aa/../../cc/../../bb/../../dd/../../aa/../../cc/../../bb/../../dd/../../bb/../../dd/../../bb/../../dd/../../bb/../../dd/../../ee/../../etc/profile {status=200}  {tag="/etc/profile.d/*.sh"}|任意扫描方式|存在漏洞
+目录文件遍历泄漏|/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/profile {tag="/etc/profile.d/*.sh"} |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd  {tag="root:x:"}  |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd   {tag="root:x:"} |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd {tag="root:x:"} |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/resource/tutorial/jndi-appconfig/test?inputFile=/etc/passwd    {tag="root:x:"} |任意扫描方式|存在漏洞
 系统服务|/etc/passwd {tag="root:x:"} |任意扫描方式|存在漏洞
 系统服务|/etc/passwd {tag="root:x:"} |任意扫描方式|存在漏洞
 系统服务|/etc/passwd {tag="root:x:"} |任意扫描方式|存在漏洞
