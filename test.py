@@ -1,3 +1,4 @@
+#coding=utf-8
 from pyse import Pyse, TestCase, TestRunner
 from parameterized import parameterized
 
